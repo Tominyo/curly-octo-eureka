@@ -86,23 +86,6 @@ public class TemplateMapping {
 		
 	}
 	
-	public void addButtonsListener() {
-		for(i=0; i<18; i++) {
-			buttonsList.get(i).setOnAction(new EventHandler<ActionEvent>() {
-
-				@Override
-				public void handle(ActionEvent arg0) {
-					// TODO Auto-generated method stub
-					//System.out.println(templatesListe.get(i).getTemplate().get());
-					//templateValeur.setText(templatesListe.get(i).getTemplate().get());
-					templateValeur.setText(buttonsList.get(i).getText());
-				}
-				
-			});
-		}
-		
-	}
-	
 	
     //Méthode qui sera utilisée dans l'initialisation de l'IHM 
     //dans notre classe principale
@@ -111,6 +94,5 @@ public class TemplateMapping {
         // On lie notre liste observable au composant TableView
        initializeTemplates();
        initializeButtons();
-       addButtonsListener();
     }
 }
