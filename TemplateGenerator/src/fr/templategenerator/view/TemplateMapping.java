@@ -1,11 +1,13 @@
 package fr.templategenerator.view;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import fr.templategenerator.MainClass;
 import fr.templategenerator.model.Template;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -21,7 +23,11 @@ public class TemplateMapping {
     @FXML
     private VBox vbox1;
     
-    private List<Template> templateListe;
+    private List<Template> templatesListe;
+    
+    private List<Button> buttonsList;
+    
+    int i = 0;
     
     
     //Objet servant de référence à notre classe principale
@@ -57,31 +63,54 @@ public class TemplateMapping {
 		}
 	}
 	
+	public void initializeTemplates() {
+		templatesListe = new ArrayList<Template>();
+		for(i=0; i<20; i++) {
+			templatesListe.add(new Template("Template "+i, i, "Voici le Template n°"+i));
+		}
+	}
+	
 	public void initializeButtons() {
+		buttonsList = new ArrayList<Button>();
 		
-		Template template1 = templateListe.get(0);
+		for(i=0; i<19; i++) {
+			Button button = new Button("Template "+i);
+			vbox1.getChildren().add(button);
+			buttonsList.add(button);
+		}
 		
-		Button btn1 = new Button();
- 	    btn1.setText(template1.getNom().get());
- 	    btn1.setOnAction(new EventHandler<ActionEvent>() {
+		for (Iterator<Template> i = templatesListe.iterator(); i.hasNext();) {
+		    Template item = i.next();
+		    System.out.println(item);
+		}
+		
+	}
+	
+	public void addButtonsListener() {
+		for(i=0; i<18; i++) {
+			buttonsList.get(i).setOnAction(new EventHandler<ActionEvent>() {
 
 				@Override
 				public void handle(ActionEvent arg0) {
 					// TODO Auto-generated method stub
-					templateValeur.setText(template1.getTemplate().get());
+					//System.out.println(templatesListe.get(i).getTemplate().get());
+					//templateValeur.setText(templatesListe.get(i).getTemplate().get());
+					templateValeur.setText(buttonsList.get(i).getText());
 				}
- 	    	
- 	    });
- 	    vbox1.getChildren().add(btn1);
+				
+			});
+		}
+		
 	}
-
-    //Méthode qui sera utilisée dans l'initialisation de l'IHM
+	
+	
+    //Méthode qui sera utilisée dans l'initialisation de l'IHM 
     //dans notre classe principale
     public void setMainApp(MainClass mainApp) {
         this.main = mainApp;
         // On lie notre liste observable au composant TableView
-        templateListe = new ArrayList<Template>();
-       templateListe.add(main.getListDeTemplate().get(0));
+       initializeTemplates();
        initializeButtons();
+       addButtonsListener();
     }
 }
