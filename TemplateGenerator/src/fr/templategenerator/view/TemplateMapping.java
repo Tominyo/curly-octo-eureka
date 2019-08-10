@@ -63,26 +63,28 @@ public class TemplateMapping {
 		}
 	}
 	
-	public void initializeTemplates() {
-		templatesListe = new ArrayList<Template>();
-		for(i=0; i<20; i++) {
-			templatesListe.add(new Template("Template "+i, i, "Voici le Template n°"+i));
-		}
-	}
 	
-	public void initializeButtons() {
-		buttonsList = new ArrayList<Button>();
+	public void initializeData() {
 		
-		for(i=0; i<19; i++) {
+buttonsList = new ArrayList<Button>();
+templatesListe = new ArrayList<Template>();
+		
+		for(i=0; i<20; i++) {
 			Button button = new Button("Template "+i);
+			Template template = new Template("Template "+i, i, "Voici le Template n°"+i);
+			button.setOnAction(new EventHandler() {
+
+				@Override
+				public void handle(Event arg0) {
+					// TODO Auto-generated method stub
+					templateValeur.setText(template.getTemplate().get());
+				}
+				
+			});
 			vbox1.getChildren().add(button);
 			buttonsList.add(button);
 		}
 		
-		for (Iterator<Template> i = templatesListe.iterator(); i.hasNext();) {
-		    Template item = i.next();
-		    System.out.println(item);
-		}
 		
 	}
 	
@@ -91,8 +93,8 @@ public class TemplateMapping {
     //dans notre classe principale
     public void setMainApp(MainClass mainApp) {
         this.main = mainApp;
-        // On lie notre liste observable au composant TableView
-       initializeTemplates();
-       initializeButtons();
+       // On lie notre liste observable au composant TableView
+
+       initializeData();
     }
 }
