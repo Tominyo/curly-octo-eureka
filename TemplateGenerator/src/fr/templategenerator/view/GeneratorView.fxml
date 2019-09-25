@@ -23,7 +23,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="296.0">
                <children>
-                  <Label fx:id="nomValeur" layoutX="92.0" layoutY="14.0" text="Code HTML" textAlignment="CENTER" AnchorPane.topAnchor="14.0" />
+                  <Label fx:id="nomValeur" ellipsisString="" layoutX="111.0" layoutY="14.0" prefHeight="25.0" text="Titre" textAlignment="CENTER" wrapText="true" AnchorPane.topAnchor="14.0" />
                   <TextArea fx:id="templateValeur" layoutX="24.0" layoutY="39.0" prefHeight="219.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="39.0" />
                   <Button fx:id="copyButton" layoutX="161.0" layoutY="266.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="COPIER" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="22.0" />
                </children>

@@ -1,0 +1,23 @@
+[Nom de l’employeur ou de la société]
+[Adresse]
+N° Immatriculation URSSAF : [x]
+URSSAF de : [adresse]
+N° RCS : [x] / N° SIRET : [x]
+
+[Nom & prénom du salarié]
+[Adresse du salarié]
+
+À [Ville], le [date]
+
+Objet : notification de renonciation au bénéfice et à l’application [de la clause de non-concurrence / de votre engagement d’abstention] prévu(e) à l’article [x] de votre contrat de travail
+Courrier en recommandé avec AR
+
+[Titre, nom et prénom],
+Conformément à l’article [x] de votre contrat de travail [ajouter éventuellement : et aux dispositions de la convention collective de …], nous vous informons de notre choix de renoncer au bénéfice et à l’application [de la clause de non-concurrence / de votre engagement d’abstention] qui nous lie.
+Par conséquent, à la date de réception de ce courrier :
+vous serez libéré(e) de toute obligation en matière [de non-concurrence / d’engagement d’abstention] ;
+nous serons libérés de l’obligation de vous verser la contrepartie financière prévue [à l’article … de votre contrat de travail / par la convention collective de…].
+[Formule de politesse, par exemple : Je vous prie de recevoir, Madame/Monsieur, l'assurance de ma considération distinguée.]
+
+[Nom et titre du signataire]
+[Signature]

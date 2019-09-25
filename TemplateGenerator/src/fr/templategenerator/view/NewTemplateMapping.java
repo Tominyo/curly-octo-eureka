@@ -89,7 +89,7 @@ public class NewTemplateMapping implements Initializable{
 		Path source = Paths.get("templates/"+ templateName.get()+".txt");
 		
 		//Ouverture d'un Writer en écriture :
-		try ( BufferedWriter writer = Files.newBufferedWriter(source, StandardCharsets.UTF_8) )  {
+		try ( BufferedWriter writer = Files.newBufferedWriter(source, StandardCharsets.ISO_8859_1) )  {
 			
 			  String str = "";
 			  str = templateContent.get();

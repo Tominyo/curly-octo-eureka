@@ -85,7 +85,7 @@ public class TemplateMapping {
 		    
 
 			//Ouverture d'un Reader en lecture :
-			try ( BufferedReader reader = Files.newBufferedReader(source, StandardCharsets.UTF_8) )  {
+			try ( BufferedReader reader = Files.newBufferedReader(source, StandardCharsets.ISO_8859_1) )  {
 				
 				
 				String line;
@@ -94,7 +94,7 @@ public class TemplateMapping {
 				while ((line = reader.readLine()) != null) {
 					texte += line;
 					texte += "\n";
-					System.out.println(line);
+					
 				}
 				StringProperty titre = new SimpleStringProperty(source.getFileName().toString());
 				StringProperty texteP = new SimpleStringProperty(texte);
@@ -134,6 +134,7 @@ public class TemplateMapping {
 				@Override
 				public void handle(ActionEvent arg0) {
 					// TODO Auto-generated method stub
+					nomValeur.setText(item.getNom().get());
 					templateValeur.setText(item.getTemplate().get());
 					//templateValeur.setText(liste.get(i).getTemplate().get());
 				}

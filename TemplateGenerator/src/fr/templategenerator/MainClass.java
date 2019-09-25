@@ -12,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -54,6 +55,8 @@ public class MainClass extends Application {
 			//On définit une scène principale avec notre conteneur
 			Scene scene = new Scene(conteneurPrincipal);
 			//Que nous affectons à notre Stage
+			
+			stagePrincipal.getIcons().add(new Image("encyclopedia.png"));
 			stagePrincipal.setScene(scene);
 			
 			//Initialisation de notre contrôleur

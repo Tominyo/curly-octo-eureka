@@ -27,8 +27,7 @@ public class TemplateMenuMapping {
     public TemplateMenuMapping() { }
     
     @FXML
-    private void initialize() {
-        	    
+    private void initialize() {	    
     	    
     }
     
